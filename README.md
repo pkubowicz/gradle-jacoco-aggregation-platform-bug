@@ -1,4 +1,5 @@
-Run
+To reproduce the failure run:
+
 ```
 ./gradlew testCodeCoverageReport
 ```

@@ -11,9 +11,11 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: 11
-    - uses: gradle/gradle-build-action@v2
+    - name: aggregate without that dependency
+      uses: gradle/gradle-build-action@v2
       with:
         arguments: testCodeCoverageReport -PremoveThatDependency
-    - uses: gradle/gradle-build-action@v2
+    - name: aggregate with the dependency
+      uses: gradle/gradle-build-action@v2
       with:
         arguments: testCodeCoverageReport
